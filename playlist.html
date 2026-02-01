@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pascacio's Vault</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.9.3/semantic.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title"><a href="index.html">Pascacio's Vault</a></h1>
+    </header>
+    <nav class="ui fluid six menu">
+      <a class="item" href="index.html">Home</a>
+      <a class="item" href="interests.html">Interests</a>
+      <a class="item" href="hobbies.html">Hobbies</a>
+      <a class="item" href="movies.html">Movies</a>
+      <a class="active item" href="playlist.html">Ultimate Playlist</a>
+      <a class="item" href="gallery.html">Gallery</a>
+    </nav>
+
+    <div class="ui stackable container">
+      <main>
+        <h1 class="page">My Ultimate Playlist</h1>
+
+        <p>
+          MELOMANIAC (noun) <br />
+          Definition: An individual that is <span>inordinately</span> and
+          <span>abnormally </span>affected by musical or other tones in certain
+          ranges of sound. <br />
+          &nbsp; <br />
+          <span>Music</span> has been my scape since I remember. It teaches me
+          so much about the world and how human interactions can be weird and
+          precious at the same time. Here I will share my collection of
+          <span>greatest hits.</span>
+        </p>
+        &nbsp;
+
+        <div id="playlist-container"></div>
+
+        <script id="helpers-playlist" type="text/x-handlebars-template">
+          <div class="ui three column grid">
+            {{#each this}}
+              <div class="column">
+                <div class="ui link cards">
+                  <div class="ui card">
+                    <div class="image">
+                      <img src="{{image}}" />
+                    </div>
+                    <div class="content">
+                      <a
+                        href="{{url}}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="header"
+                      >{{name}}</a>
+                      <div class="meta">
+                        <span class="artist">{{artist}}</span>
+                      </div>
+                      <div class="description">
+                        "{{line1}}<br />
+                        &nbsp;{{line2}}"
+                      </div>
+                    </div>
+                    <div class="extra content">
+                      <i class="microphone icon"></i>
+                      Album:
+                      {{album}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        </script>
+      </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+    <script src="js/script.js"></script>
+    <footer>
+      <div class="footerContent">
+        <h3>Pascacio's Vault &copy;</h3>
+        <p>
+          All rights reserved to Pascacio's Vault &copy; <br />Any queries can
+          be responded if you contact with our team.
+        </p>
+        <p>Contact:pascaciosVault@gmail.com</p>
+      </div>
+    </footer>
+  </body>
+</html>

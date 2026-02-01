@@ -1,0 +1,294 @@
+@font-face {
+    font-family: PressStart2P;
+    src: url("../resources/PressStart2P-Regular.ttf");
+    /*Code taken from Stack overflow*/
+}
+
+@font-face {
+    font-family: SpaceMono;
+    src: url("../resources/SpaceMono-Regular.ttf");
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-image: url("../images/night.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#title {
+    padding-top: 50px;
+    background-color: black;
+    font-family: "PressStart2P";
+    text-align: center;
+    color: white;
+    text-shadow: 3px 5px #915ba4;
+    padding-bottom: 35px;
+}
+
+#title a {
+    color: white;
+    text-decoration: none;
+    font-family: "PressStart2P";
+    transition: color 0.3s;
+}
+
+#title a:hover {
+    color: #501f5a;
+}
+
+h2 {
+    color: white;
+    font-family: "SpaceMono";
+    font-style: bold;
+    display: flexbox;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.ui.fluid.six.menu {
+    background-color: rgb(80, 31, 90, 0.8);
+    border-bottom-color: #915ba4;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+.ui.fluid.six.menu .item {
+    font-family: "Space Mono";
+    color: white;
+    font-weight: bold;
+}
+
+.ui.fluid.six.menu .item:hover {
+    color: black;
+    background-color: #c2649b;
+    transition: color 0.3s;
+}
+
+.ui.fluid.six.menu .active.item {
+    background-color: #915ba4;
+    color: black;
+    border-color: black;
+}
+
+blockquote {
+    background-color: #915ba4;
+    color: black;
+    font-family: "SpaceMono";
+    font-style: italic;
+    margin-left: 250px;
+    margin-right: 250px;
+    padding: 15px;
+    text-align: center;
+    animation: bgColorChange 4s ease-in-out infinite;
+}
+
+blockquote:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px #915ba4;
+}
+
+@keyframes bgColorChange {
+    0% {
+        background-color: #915ba4;
+    }
+    50% {
+        background-color: #c2649b;
+    }
+    100% {
+        background-color: #915ba4;
+    }
+}
+
+#center {
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 5%;
+}
+
+.textCenter {
+    margin-top: 30px;
+    margin-left: 250px;
+    margin-right: 250px;
+    padding: 0;
+    font-family: "SpaceMono";
+    text-align: center;
+}
+
+span {
+    color: #c2649b;
+}
+
+.ui.container {
+    margin: 5%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+.page {
+    color: #e783b5;
+    font-family: "SpaceMono";
+}
+
+p {
+    font-family: "SpaceMono";
+    color: white;
+}
+
+img {
+    width: 100%;
+    max-width: 450px;
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5%;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.gallery a{
+    height:250px;
+    width: 300px;
+    margin: 0px 20px 0px 20px;
+    overflow: hidden;
+}
+
+ol li {
+    font-family: "SpaceMono";
+    color: #c2649b;
+}
+
+ol li span {
+    color: white;
+}
+
+ol li span a {
+    color: white;
+}
+
+ol li span a:hover {
+    color: #915ba4;
+}
+
+table {
+    width: 60%;
+    margin: 5% auto;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 2px solid rgba(0, 0, 0, 0.9);
+    border-right: 2px solid rgba(0, 0, 0, 0.9);
+    padding: 0.4em;
+    font-family: "SpaceMono";
+}
+
+thead {
+    background-color: #501f5a;
+    color: white;
+}
+
+tbody td {
+    text-align-last: left;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #e783b5;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: #c2649b;
+}
+
+tbody tr:hover {
+    cursor: pointer;
+    background-color: rgba(194, 100, 155, 0.78);
+}
+
+tbody td:nth-of-type(3) {
+    text-align-last: center;
+}
+
+figcaption {
+    font-family: "SpaceMono";
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.image {
+    width: 90%;
+    max-width: 300px;
+    border-radius: 5%;
+}
+
+footer {
+    width: 100%;
+    margin-top: 75px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.footerContent {
+    display: flex;
+    margin-left: 250px;
+    margin-right: 250px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footerContent h3 {
+    font-family: "PressStart2P";
+    text-align: center;
+    color: white;
+    text-shadow: 2px 3px #915ba4;
+}
+
+.footerContent p {
+    font-size: small;
+}
+
+.ui.card .content .header:hover {
+    color: #915ba4 !important; /* This code was not working, so "!important" was added to everride any other comflicting CSS rule */
+}
+
+.artist {
+    color: #c2649b;
+}
+
+.ui.card {
+    background-color: rgb(255, 255, 255, 0.9) !important;
+}
+.ui.card:hover {
+    box-shadow: 0 0 25px #915ba4 !important;
+    background-color: white !important;
+}
+
+.movie {
+    text-align: left;
+}
