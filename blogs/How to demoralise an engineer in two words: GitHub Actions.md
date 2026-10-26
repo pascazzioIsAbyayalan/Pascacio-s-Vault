@@ -4,5 +4,6 @@ The way I was taught GitHub was rather... unique. It wasn't shown as the version
 
 When I started my Internship a couple of months ago, my *mentor* introduced me to what GitHub **actually** does. And once again, my eyes sparked with the dopamine of feeling that life had given me the answer to all my problems. That was until I was transferred with my second *mentor* to the **continuos release team** of our org. *Great Mother* of Pandora...
 
-You see, using GitHub and `git` solely for version control is helpful and quite straight forward. `git` commands 
+You see, using GitHub and `git` solely for version control is helpful and quite straight forward. `git` commands are powerful and quite simple to understand at first. `add, commit, push`. Simple, right? 
 
+The thing is, the more you work with GitHub, the more things you discover it can do. Again, I was amazed by this. But then it came... the **workflows...**
