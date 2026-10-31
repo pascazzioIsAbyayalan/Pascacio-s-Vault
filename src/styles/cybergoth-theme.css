@@ -14,7 +14,7 @@
   --vault-grey-purple: #80778b;      /* Greyish purple */
   --vault-cyber-cyan: #00ffff;       /* Keep cyan for contrast */
   --vault-matrix-green: #00ff41;     /* Matrix green */
-  --vault-glass-bg: rgba(43, 23, 70, 0.3);  /* Purple-tinted glass */
+  --vault-glass-bg: rgba(43, 23, 70, 0.6);  /* Purple-tinted glass */
   --vault-glass-border: rgba(140, 132, 187, 0.3);  /* Lavender glass border */
 
   /* === PatternFly Overrides === */
@@ -54,13 +54,13 @@ body {
 /* === Glassmorphism Base === */
 .glass-panel {
   background: var(--vault-glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid var(--vault-glass-border);
   border-radius: 12px;
   box-shadow:
-    0 8px 32px 0 rgba(107, 77, 153, 0.2),
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    0 8px 32px 0 rgba(107, 77, 153, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
 }
 
