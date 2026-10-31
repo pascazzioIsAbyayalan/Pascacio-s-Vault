@@ -1,10 +1,11 @@
 import type { Song } from '../types/Song';
+import { assetPath } from '../utils/assetPath';
 
 export const songs: Song[] = [
   {
     id: '1',
     url: 'https://youtu.be/mzWnW1V9EMc?si=_F9Hdw8DI7fC1zdH',
-    image: '/images/card01.jpg',
+    image: assetPath('/images/card01.jpg'),
     name: 'Life Goes On',
     artist: 'AGUST D',
     line1: "Don't be afraid until the end of my life",
@@ -14,7 +15,7 @@ export const songs: Song[] = [
   {
     id: '2',
     url: 'https://youtu.be/lbmbwDkz7gQ?si=7mHW21Xu1mzXZ7i6',
-    image: '/images/card02.jpg',
+    image: assetPath('/images/card02.jpg'),
     name: 'All you want',
     artist: 'GIRLKIND XJR',
     line1: 'There are many more starts today',
@@ -24,7 +25,7 @@ export const songs: Song[] = [
   {
     id: '3',
     url: 'https://youtu.be/xEeFrLSkMm8?si=pFgcy5pA4Bn_jr9F',
-    image: '/images/card03.jpg',
+    image: assetPath('/images/card03.jpg'),
     name: 'Spring Day',
     artist: 'BTS',
     line1: "I miss you, honestly, but I'll erase you",
@@ -34,7 +35,7 @@ export const songs: Song[] = [
   {
     id: '4',
     url: 'https://youtu.be/kXB-Ibr55LI?si=Cr0_-lYC_yW682Ra',
-    image: '/images/card04.jpg',
+    image: assetPath('/images/card04.jpg'),
     name: 'Hawaiian Roller Coaster Ride',
     artist: "MARK KEALI'I HO'OMALU",
     line1: 'And If I had one wish come true',
@@ -44,7 +45,7 @@ export const songs: Song[] = [
   {
     id: '5',
     url: 'https://youtu.be/RyJ5GbzEZC0?si=mwyxSgVpkh6Had2e',
-    image: '/images/card05.jpg',
+    image: assetPath('/images/card05.jpg'),
     name: 'Meet Me At Our Spot',
     artist: 'THE ANXIETY, WILLOW & TYLER COLE',
     line1: "I slept through the day, f**k",
@@ -54,7 +55,7 @@ export const songs: Song[] = [
   {
     id: '6',
     url: 'https://youtu.be/PPEf2ugpLok?si=bNqnXn9eTwVk-ypC',
-    image: '/images/card06.jpg',
+    image: assetPath('/images/card06.jpg'),
     name: 'Blue Velvet',
     artist: 'TMIDICRONICA',
     line1: 'Passion is a midnight of [...] roses',

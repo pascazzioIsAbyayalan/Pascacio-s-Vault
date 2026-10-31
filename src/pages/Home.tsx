@@ -1,3 +1,5 @@
+import { assetPath } from '../utils/assetPath';
+
 export const Home = () => {
   return (
     <div style={{
@@ -67,7 +69,7 @@ export const Home = () => {
             {/* Image with glass border */}
             <div style={{ position: 'relative' }}>
               <img
-                src="/images/me.jpg"
+                src={assetPath('/images/me.jpg')}
                 alt="A picture of me"
                 style={{
                   width: '100%',
