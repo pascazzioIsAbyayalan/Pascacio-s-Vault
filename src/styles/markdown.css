@@ -1,0 +1,103 @@
+/* Markdown content styling for blog posts */
+
+.blog-content {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #ffffff;
+  text-align: left;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+/* Inline code within paragraphs */
+.blog-content p code,
+.blog-content code {
+  display: inline;
+  vertical-align: baseline;
+}
+
+.blog-content a {
+  color: #00ffff;
+  text-decoration: none;
+  border-bottom: 1px dotted #00ffff;
+  transition: all 0.3s;
+}
+
+.blog-content a:hover {
+  color: #ff6ec7;
+  border-bottom-color: #ff6ec7;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.blog-content blockquote {
+  border-left: 3px solid #b794f6;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: #b794f6;
+  font-style: italic;
+}
+
+.blog-content pre {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(157, 123, 216, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.blog-content pre code {
+  background: none !important;
+  padding: 0 !important;
+  color: #00ff41;
+}
+
+.blog-content hr {
+  border: none;
+  border-top: 1px solid rgba(157, 123, 216, 0.3);
+  margin: 2rem 0;
+}
+
+.blog-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid rgba(157, 123, 216, 0.3);
+  margin: 1.5rem 0;
+}
+
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+}
+
+.blog-content th,
+.blog-content td {
+  border: 1px solid rgba(157, 123, 216, 0.3);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.blog-content th {
+  background: rgba(157, 123, 216, 0.2);
+  color: #00ffff;
+  font-weight: bold;
+}
+
+.blog-content td {
+  background: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,370 @@
+/*
+ * Pascacio's Vault - Cybergoth Theme
+ * Purple/Magenta aesthetic with glitch effects
+ */
+
+:root {
+  /* === Color Palette - New Purple Scheme === */
+  --vault-deep-purple: #2b1746;      /* Dark purple background */
+  --vault-very-dark: #0b080d;        /* Near black */
+  --vault-medium-purple: #4b3665;    /* Medium dark purple */
+  --vault-rich-purple: #704d82;      /* Rich purple */
+  --vault-accent-purple: #8c84bb;    /* Lavender purple accent */
+  --vault-light-purple: #b59dc7;     /* Light lavender */
+  --vault-grey-purple: #80778b;      /* Greyish purple */
+  --vault-cyber-cyan: #00ffff;       /* Keep cyan for contrast */
+  --vault-matrix-green: #00ff41;     /* Matrix green */
+  --vault-glass-bg: rgba(43, 23, 70, 0.3);  /* Purple-tinted glass */
+  --vault-glass-border: rgba(140, 132, 187, 0.3);  /* Lavender glass border */
+
+  /* === PatternFly Overrides === */
+  /* Background colors */
+  --pf-v6-global--BackgroundColor--100: #0a0014; /* Near black with purple tint */
+  --pf-v6-global--BackgroundColor--200: #1a0a2e; /* Dark purple background */
+
+  /* Primary brand color */
+  --pf-v6-global--primary-color--100: var(--vault-medium-purple);
+  --pf-v6-global--primary-color--200: var(--vault-pink-purple);
+
+  /* Links */
+  --pf-v6-global--link--Color: var(--vault-light-pink);
+  --pf-v6-global--link--Color--hover: var(--vault-neon-magenta);
+
+  /* Borders */
+  --pf-v6-global--BorderColor--100: var(--vault-medium-purple);
+
+  /* Typography */
+  --pf-v6-global--Color--100: #ffffff; /* Main text */
+  --pf-v6-global--Color--200: var(--vault-light-pink); /* Secondary text */
+}
+
+/* === Global Styles === */
+body {
+  background: radial-gradient(circle at top right, #2b1746 0%, #0b080d 100%) !important;
+  color: white;
+  font-family: 'Space Mono', 'Courier New', monospace;
+  overflow-x: hidden;
+}
+
+#root {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* === Glassmorphism Base === */
+.glass-panel {
+  background: var(--vault-glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--vault-glass-border);
+  border-radius: 12px;
+  box-shadow:
+    0 8px 32px 0 rgba(107, 77, 153, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--vault-accent-purple);
+  box-shadow:
+    0 8px 32px 0 rgba(140, 132, 187, 0.4),
+    0 0 20px rgba(140, 132, 187, 0.3),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* === Neon Glow Effect === */
+.neon-glow {
+  box-shadow:
+    0 0 10px var(--vault-rich-purple),
+    0 0 20px var(--vault-rich-purple),
+    0 0 30px var(--vault-accent-purple);
+  transition: box-shadow 0.3s ease;
+}
+
+.neon-glow:hover {
+  box-shadow:
+    0 0 15px var(--vault-light-purple),
+    0 0 30px var(--vault-light-purple),
+    0 0 45px var(--vault-accent-purple);
+}
+
+/* === Terminal/Hacker Aesthetic === */
+.terminal-prompt {
+  font-family: 'Courier New', monospace;
+  color: var(--vault-matrix-green);
+  font-weight: bold;
+}
+
+.terminal-prompt::before {
+  content: '> ';
+  color: var(--vault-cyber-cyan);
+}
+
+.command-prefix {
+  color: var(--vault-accent-purple);
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+.command-prefix::before {
+  content: '$ ';
+  color: var(--vault-cyber-cyan);
+}
+
+/* Blinking cursor */
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--vault-accent-purple);
+  margin-left: 4px;
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+/* Code block style */
+.code-block {
+  background: rgba(0, 0, 0, 0.5);
+  border-left: 3px solid var(--vault-accent-purple);
+  padding: 1rem;
+  font-family: 'Courier New', monospace;
+  color: var(--vault-matrix-green);
+  border-radius: 4px;
+  position: relative;
+  overflow-x: auto;
+}
+
+.code-block::before {
+  content: '// code';
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  font-size: 0.7rem;
+  color: var(--vault-purple-glow);
+  opacity: 0.5;
+}
+
+/* Line numbers accent */
+.line-numbers {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background: rgba(107, 77, 153, 0.1);
+  border-right: 1px solid var(--vault-glass-border);
+  padding: 0.5rem 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--vault-purple-glow);
+  opacity: 0.5;
+  text-align: right;
+  padding-right: 8px;
+}
+
+/* ASCII art accent */
+.ascii-corner {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  color: var(--vault-purple-glow);
+  opacity: 0.3;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.ascii-corner.top-left {
+  top: 8px;
+  left: 8px;
+}
+
+.ascii-corner.top-right {
+  top: 8px;
+  right: 8px;
+}
+
+/* === Glitch Text Effect === */
+.glitch {
+  position: relative;
+  color: white;
+  text-shadow:
+    2px 2px 0 var(--vault-cyber-cyan),
+    -2px -2px 0 var(--vault-neon-magenta);
+  animation: glitch-anim 3s infinite;
+}
+
+@keyframes glitch-anim {
+  0%, 90%, 100% {
+    text-shadow:
+      2px 2px 0 var(--vault-cyber-cyan),
+      -2px -2px 0 var(--vault-neon-magenta);
+  }
+  95% {
+    text-shadow:
+      5px 2px 0 var(--vault-cyber-cyan),
+      -5px -2px 0 var(--vault-neon-magenta);
+  }
+}
+
+/* === CRT Scanlines === */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  z-index: 100;
+  animation: scanline-move 8s linear infinite;
+}
+
+@keyframes scanline-move {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}
+
+/* === Holographic Border === */
+.holo-border {
+  position: relative;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+.holo-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    45deg,
+    var(--vault-cyber-cyan),
+    var(--vault-neon-magenta),
+    var(--vault-medium-purple),
+    var(--vault-cyber-cyan)
+  );
+  background-size: 300% 300%;
+  border-radius: inherit;
+  z-index: -1;
+  animation: holo-rotate 4s linear infinite;
+}
+
+@keyframes holo-rotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === Custom Scrollbar === */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--vault-deep-purple);
+  border-left: 1px solid var(--vault-medium-purple);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vault-pink-purple);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vault-neon-magenta);
+  box-shadow: 0 0 10px var(--vault-neon-magenta);
+}
+
+/* === PatternFly Component Overrides === */
+
+/* Cards */
+.pf-v6-c-card {
+  background: var(--vault-glass-bg) !important;
+  border: 1px solid var(--vault-glass-border) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px 0 rgba(107, 77, 153, 0.2);
+  transition: all 0.3s ease;
+}
+
+.pf-v6-c-card:hover {
+  border-color: var(--vault-purple-glow) !important;
+  box-shadow:
+    0 8px 32px 0 rgba(157, 123, 216, 0.4),
+    0 0 20px rgba(157, 123, 216, 0.3) !important;
+  transform: translateY(-2px);
+}
+
+/* Navigation */
+.pf-v6-c-nav {
+  background: var(--vault-glass-bg) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.pf-v6-c-nav__link {
+  color: var(--vault-accent-purple) !important;
+  transition: all 0.3s ease;
+}
+
+.pf-v6-c-nav__link:hover {
+  background: rgba(157, 123, 216, 0.2) !important;
+  color: var(--vault-cyber-cyan) !important;
+}
+
+.pf-v6-c-nav__link.pf-m-current {
+  background: rgba(157, 123, 216, 0.3) !important;
+  color: var(--vault-cyber-cyan) !important;
+  border-left: 3px solid var(--vault-accent-purple);
+}
+
+/* Buttons */
+.pf-v6-c-button.pf-m-primary {
+  background: var(--vault-rich-purple) !important;
+  border-color: var(--vault-accent-purple) !important;
+  color: white !important;
+  font-family: 'Space Mono', monospace !important;
+}
+
+.pf-v6-c-button.pf-m-primary:hover {
+  background: var(--vault-accent-purple) !important;
+  box-shadow: 0 0 15px var(--vault-light-purple);
+  transform: translateY(-1px);
+}
+
+/* === Responsive Utilities === */
+.responsive-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .glass-panel {
+    padding: 1.5rem 1rem !important;
+  }
+
+  .ascii-corner {
+    display: none;
+  }
+}
