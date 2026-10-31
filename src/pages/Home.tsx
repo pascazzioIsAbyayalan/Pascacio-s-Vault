@@ -67,7 +67,7 @@ export const Home = () => {
             {/* Image with glass border */}
             <div style={{ position: 'relative' }}>
               <img
-                src="/me.jpg"
+                src="/images/me.jpg"
                 alt="A picture of me"
                 style={{
                   width: '100%',

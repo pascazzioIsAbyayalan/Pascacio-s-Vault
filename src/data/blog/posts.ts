@@ -9,6 +9,6 @@ export const blogPosts: BlogPost[] = [
     tags: ['github', 'ci-cd', 'devops', 'workflows'],
     excerpt: 'A deep dive into the frustrations of GitHub Actions and CI/CD pipelines. From mysterious failures to YAML hell, discover why these two words can send shivers down an engineer\'s spine.',
     readingTime: '3 min read',
-    markdownFile: '/blog-github-actions.md',
+    markdownFile: '/blogs/blog-github-actions.md',
   },
 ];
