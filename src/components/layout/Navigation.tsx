@@ -72,7 +72,7 @@ export const Navigation = () => {
             }}
           >
             {Icon ? (
-              <Icon size="sm" />
+              <Icon />
             ) : (
               <span style={{ fontFamily: 'Courier New, monospace', fontWeight: 'bold' }}>
                 {item.text}

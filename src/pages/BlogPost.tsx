@@ -239,8 +239,9 @@ export const BlogPost = () => {
                   {children}
                 </h3>
               ),
-              code: ({ node, inline, children, ...props }) => {
+              code: ({ node, children, ...props }: any) => {
                 // Inline code: stays in paragraph with tan background
+                const inline = !props.className;
                 if (inline) {
                   return (
                     <code
